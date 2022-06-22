@@ -1,0 +1,39 @@
+\documentclass[resume]{subfiles}
+
+
+\begin{document}
+\section{Hautes fréquences}
+\section{Antennes}
+\subsection{Dipôle}
+2 brins de longueur totale $l$ et de diamètre $a$
+$$l\ll \lambda$$
+$$a\ll\lambda$$
+Il existe deux zones
+\begin{itemize}
+\item Zone de Fresnel (zone de champ proche)
+\item Zone de Fraunhofer (zone de champ lointain)
+\end{itemize}
+Il est important de se placer dans la bonne zone lorsqu'on fait des tests.
+\subsection{Réflexion}
+$$\Gamma=\frac{Z_{in}-Z_0}{Z_{in}-Z_0}$$
+$$S_{11}=20\log_{10}(\Gamma)\quad [\si{\deci\bel}]$$
+\subsection{Rayonnement}
+On utilise la formule de Friis
+$$P_r=P_tG_rG_t\left(\frac{\lambda}{4\pi R}\right)^2$$
+en dB :
+$$P_r=P_t+G_r+G_t+20\log\left(\frac{\lambda}{4\pi R}\right)$$
+\subsection{Puissance}
+$$\boxed{P_{\si{\deci\bel}}=10\log_{10}\left(P_{\si{\watt}}\right)}$$
+$$\boxed{P_{\si{\deci\bel m}}=10\log_{10}\left(P_{\si{\milli\watt}}\right)}$$
+\subsection{Zones}
+\paragraph{Zone de Fresnel} $r_1 < x < r_2$
+\paragraph{Zone de Fraunhofer} $ r_x < x$
+
+$$r_1=\sqrt{0.38\frac{D^3}{\lambda}}$$
+$$r_2=\frac{2D^2}{\lambda}$$
+
+
+
+
+
+\end{document}

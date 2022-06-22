@@ -1,0 +1,89 @@
+\documentclass[resume]{subfiles}
+
+
+\begin{document}
+\section{Basses fréquences}
+\begin{itemize}
+\item $\vec{E}$ : Champ électrique [\si{\volt\per\meter}]
+\item $\vec{D}$ : Déplacement (ou induction) électrique [\si{\coulomb\per\square\meter}] ou [\si{\ampere\second\per\square\meter}]
+\item $\vec{H}$ : Champ magnétique [\si{\ampere\per\meter}]
+\item $\vec{B}$ : Induction magnétique [\si{\tesla}] ou [\si{\volt\second\per\square\meter}]
+\item $\vec{J}$ : Densité de courant [\si{\ampere\per\square\meter}]
+\item $\vec{A}$ : Potentiel vecteur [\si{\tesla\meter}] ou [\si{\weber\per\meter}]
+\item $\Phi$ : Flux d'induction magnétique [\si{\weber}]
+\item $\varepsilon$ : permitivité [\si{\farad\per\meter}]
+\item $\mu$ : pérméabilité [\si{\henry\per\meter}]
+\item $\sigma$ : conductivité [\si{\siemens\per\meter}]
+\end{itemize}
+\paragraph{Isovaleur} : Ligne sur laquelle la valeur est constante
+\paragraph{Ligne de champ} : Ligne sur laquelle les vecteurs sont tangents
+\subsection{Équations de Maxwell}
+$$\Rot\vec{E}=-\frac{\partial \vec{B}}{\partial t}$$
+$$\Rot\vec{H}=\vec{J}+\frac{\partial \vec{D}}{\partial t}$$
+$$\Div\vec{D}=\rho$$
+$$\Div\vec{B}=0$$
+\subsection{Relations spécifiques aux matériaux}
+$$\vec{B}=\mu_0\mu_r\vec{H}$$
+$$\vec{D}=\varepsilon_0\varepsilon_r\vec{E}$$
+$$\vec{J}=\sigma\vec{E}$$
+\subsection{Flux}
+Intégrale sur une surface
+$$\iint_s\vec{F}d\vec{S}$$
+\subsection{Potentiel}
+$$U_{AB}=\int_{A}^{B}\vec{E}d\vec{l}$$
+\subsection{Gradient}
+$$\vec{\text{grad}}f=\grad f=\frac{\partial f}{\partial x}\vec{i}+\frac{\partial f}{\partial y}\vec{j}+\frac{\partial f}{\partial z}\vec{k}$$
+C'est la direction dans laquelle la fonction varie le plus. Le gradient est toujours perpendiculaire aux lignes d'isovaleurs.
+\subsection{Divergence}
+$$\Div\vec{F}=\nabla \vec{F}=\frac{\partial F_x}{\partial x}+\frac{\partial F_y}{\partial y}+\frac{\partial F_z}{\partial z}$$
+La divergence traduit une "création" ou une "destruction" de vecteurs.
+\subsection{Rotationnel}
+$$\Rot \vec{F}=\nabla \times \vec{F}=\left(\frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z}\right)\vec{i}+\left(\frac{\partial F_x}{\partial z}- \frac{\partial F_z}{\partial x}\right)+\left(\frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y}\right)\vec{k}$$
+\subsubsection{Propriétés}
+$$\Div(\Rot \vec{F})=0$$
+\subsection{Laplacien}
+$$\Div(\grad f)=\nabla^2 f=\frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}+\frac{\partial^2 f}{\partial z^2}$$
+\subsection{Propriétés}
+$$\Div(\grad f)=\Delta f$$
+
+\section{Modèles}
+\subsection{Électrostatique}
+$$\Rot\vec{E}=\vec{0}$$
+$$\Div\vec{D}=\rho$$
+$$\vec{D}=\varepsilon\vec{E}$$
+La relation $\Rot\vec{E}=\vec{0}$ implique qu'il existe un potentiel scalaire tel que
+$$\vec{E}=-\grad V$$
+Équation de Poisson
+$$\Delta V=\frac{-\rho}{\varepsilon}$$
+\subsection{Électrocinétique}
+On s'intéresse à la façon dont le courant se déplace
+$$\Rot\vec{E}=0$$
+$$\Div\vec{D}=\rho$$
+$$\Rot\vec{H}=\vec{J}$$
+Comme pour l'électrostatique, on a
+$$\vec{E}=-\grad V$$
+On a aussi
+$$\Div\vec{J}=0$$
+L'équation à résoudre est
+$$\sigma \Delta V=0$$
+\subsection{Magnétostatique}
+$$\Rot\vec{H}=\vec{J}$$
+$$\Div\vec{B}=0\qquad \vec{B}=\Rot\vec{A}$$
+$$\vec{H}=\nu\vec{B}\vec{H}_c$$
+$$\nu=\frac{1}{\mu}$$
+Les sources sont :
+\begin{itemize}
+\item Des courants
+\item Des aimants
+\end{itemize}
+Si on combine les relations on peut obtenir la relation de Poisson
+$$\Delta \vec{A}=-\mu \vec{J}$$
+Avec $\Delta$ le Laplacien
+\subsection{Symétries}
+\begin{itemize}
+\item A l'infini : $A=0$
+\item Symétrie géometrique et antisymétrie physique : $A=0$
+\item Symétrie géométrique et symétrie physique : $\frac{\partial A}{\partial n}=0$
+\end{itemize}
+
+\end{document}
