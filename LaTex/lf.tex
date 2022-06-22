@@ -17,6 +17,17 @@
 \end{itemize}
 \paragraph{Isovaleur} : Ligne sur laquelle la valeur est constante
 \paragraph{Ligne de champ} : Ligne sur laquelle les vecteurs sont tangents
+\begin{itemize}
+\item $D$ est la conséquence de $E$ (tension)
+\item $B$ est la conséquence de $H$ (courant)
+\end{itemize}
+\begin{itemize}
+\item Sources en électrostatique : charges ou potentiels
+\item Sources en magnéto statique : courant ou aimant
+\end{itemize}
+
+
+
 \subsection{Équations de Maxwell}
 $$\Rot\vec{E}=-\frac{\partial \vec{B}}{\partial t}$$
 $$\Rot\vec{H}=\vec{J}+\frac{\partial \vec{D}}{\partial t}$$
@@ -55,6 +66,13 @@ La relation $\Rot\vec{E}=\vec{0}$ implique qu'il existe un potentiel scalaire te
 $$\vec{E}=-\grad V$$
 Équation de Poisson
 $$\Delta V=\frac{-\rho}{\varepsilon}$$
+Équation de Laplace :
+$$\Delta V=\frac{\partial^2V}{\partial x^2}+\frac{\partial^2 V}{\partial y^2}=0$$
+\begin{itemize}
+\item Dimensionnement d'un isolant
+\item Mesure sans contact (capteur capacitif)
+\end{itemize}
+
 \subsection{Électrocinétique}
 On s'intéresse à la façon dont le courant se déplace
 $$\Rot\vec{E}=0$$
@@ -66,11 +84,16 @@ On a aussi
 $$\Div\vec{J}=0$$
 L'équation à résoudre est
 $$\sigma \Delta V=0$$
+Utilisé pour des connecteurs
 \subsection{Magnétostatique}
+Courant fixe
+$$\Rot\vec{E}=\vec{0}$$
 $$\Rot\vec{H}=\vec{J}$$
 $$\Div\vec{B}=0\qquad \vec{B}=\Rot\vec{A}$$
-$$\vec{H}=\nu\vec{B}\vec{H}_c$$
+$$\vec{H}=\nu\vec{B}-\vec{H}_c$$
 $$\nu=\frac{1}{\mu}$$
+Équation de poisson :
+$$\left(\frac{\partial A_z}{\partial x^2}+\frac{\partial A_z}{\partial x^2}+\frac{\partial A_z}{\partial z^2}\right)\vec{k}=-\mu J_z\vec{k}$$
 Les sources sont :
 \begin{itemize}
 \item Des courants
@@ -79,11 +102,48 @@ Les sources sont :
 Si on combine les relations on peut obtenir la relation de Poisson
 $$\Delta \vec{A}=-\mu \vec{J}$$
 Avec $\Delta$ le Laplacien
+\begin{itemize}
+\item Haut-parleurs
+\item Capteur magnétique
+\end{itemize}
+\subsection{Magnéto-transitoire}
+\begin{itemize}
+\item Moteur et générateur électrique
+\end{itemize}
+
+$$\Rot{\vec{E}}=-\frac{\partial \vec{B}}{\partial t}$$
+$$\Rot{\vec{H}}=\vec{J}$$
+$$\Div{\vec{B}}=0$$
+$$\vec{J}=\sigma\vec{E}\qquad \vec{H}=\nu\vec{B}-\vec{H}_c$$
+$$\vec{B}=\Rot{\vec{A}}$$
+$$\vec{E}=-\grad V-\frac{\partial \vec{A}}{\partial t}$$
+Autres relations :
+$$\Rot{\vec{E}}=-\Rot\left(\grad V\right)-\Rot\left(\frac{\partial \vec{A}}{\partial t}\right)=-\frac{\partial}{\partial t}\left(\Rot \vec{A}\right)=-\frac{\partial \vec{B}}{\partial t}$$
+$$\Rot\left(\nu \Rot\vec{A}-\vec{H}_c\right)+\sigma\left(\grad V+\frac{\partial \vec{A}}{\partial t}\right)=0$$
+
+
+\subsection{Magnéto-harmonique (courant sinusoïdal)}
+\begin{itemize}
+\item Capteur par courant de Foucault
+\end{itemize}
 \subsection{Symétries}
 \begin{itemize}
 \item A l'infini : $A=0$
 \item Symétrie géometrique et antisymétrie physique : $A=0$
 \item Symétrie géométrique et symétrie physique : $\frac{\partial A}{\partial n}=0$
 \end{itemize}
+
+
+$$\Rot \vec{E}=-\frac{\partial \vec{B}}{\partial t}$$
+$$\Rot \vec{H}=\vec{J}$$
+$$\Div \vec{B}=0$$
+$$\vec{J}=\sigma \vec{E}\qquad \vec{H}=\nu \vec{B}$$
+$$\vec{B}=\Rot \vec{A}$$
+$$\vec{E}=-\grad V-\frac{\partial \vec{A}}{\partial t}$$
+Autres relations :
+
+$$\Rot\left(\nu \Rot\vec{A}\right)+\sigma\left(\grad V+\frac{\partial \vec{A}}{\partial t}\right)=0$$
+$$\Rot\left(\nu \Rot\vec{A}\right)+\sigma\left(\grad V+j\omega \vec{A}\right)=0$$
+
 
 \end{document}
