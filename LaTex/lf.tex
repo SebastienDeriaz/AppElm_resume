@@ -66,7 +66,7 @@ La relation $\Rot\vec{E}=\vec{0}$ implique qu'il existe un potentiel scalaire te
 $$\vec{E}=-\grad V$$
 Équation de Poisson
 $$\Delta V=\frac{-\rho}{\varepsilon}$$
-Équation de Laplace :
+Équation de Laplace (lorsqu'il y a pas de densité de charge, et par conséquent $\rho=0$) :
 $$\Delta V=\frac{\partial^2V}{\partial x^2}+\frac{\partial^2 V}{\partial y^2}=0$$
 \begin{itemize}
 \item Dimensionnement d'un isolant
@@ -125,6 +125,8 @@ $$\Rot\left(\nu \Rot\vec{A}-\vec{H}_c\right)+\sigma\left(\grad V+\frac{\partial 
 \subsection{Magnéto-harmonique (courant sinusoïdal)}
 \begin{itemize}
 \item Capteur par courant de Foucault
+\item Mesure non destructive
+\item Effet de peau
 \end{itemize}
 \subsection{Symétries}
 \begin{itemize}
@@ -144,6 +146,14 @@ Autres relations :
 
 $$\Rot\left(\nu \Rot\vec{A}\right)+\sigma\left(\grad V+\frac{\partial \vec{A}}{\partial t}\right)=0$$
 $$\Rot\left(\nu \Rot\vec{A}\right)+\sigma\left(\grad V+j\omega \vec{A}\right)=0$$
-
+\subsection{Loi de Snell}
+\begin{figure}[H]
+\centering
+\includegraphics[width=4.00cm]{img_0.png}
+\end{figure}
+$$D_{1n}=D_{2n}$$
+$$E_{1n}=\frac{\varepsilon_2}{\varepsilon_1}E_{2n}$$
+$$\frac{E_{1n}}{E_{1t}}=\frac{\varepsilon_2}{\varepsilon_1}\frac{E_{2n}}{E_{2t}}$$
+$$\tan\alpha_2=\frac{\varepsilon_2}{\varepsilon_1}\tan\alpha_1$$
 
 \end{document}

@@ -3,20 +3,29 @@
 
 \begin{document}
 \section{Hautes fréquences}
+$$\SI{1}{\watt}=\SI{0}{\decibel}=\SI{30}{\decibel m}$$
+$$\SI{1}{\milli\watt}=\SI{-30}{\decibel}=\SI{0}{\decibel m}$$
 \section{Antennes}
+$$\boxed{\lambda=\frac{c}{f}}$$
+Vitesse de la lumière dans un milieu donné (avec $\mu_r$ et $\varepsilon_0$)
+$$c_r=\frac{1}{\sqrt{\varepsilon\mu}}=\frac{1}{\sqrt{\varepsilon_r\varepsilon_0\mu_r\mu_0}}=\frac{c}{\sqrt{\mu_r\varepsilon_r}}$$
+
 \subsection{Dipôle}
 2 brins de longueur totale $l$ et de diamètre $a$
 $$l\ll \lambda$$
 $$a\ll\lambda$$
-Il existe deux zones
+Il existe trois zones
 \begin{itemize}
-\item Zone de Fresnel (zone de champ proche)
+\item Champ proche (zone de champ proche non-rayonnant)
+\item Zone de Fresnel (zone de champ proche rayonnant)
 \item Zone de Fraunhofer (zone de champ lointain)
 \end{itemize}
 Il est important de se placer dans la bonne zone lorsqu'on fait des tests.
 \subsection{Réflexion}
-$$\Gamma=\frac{Z_{in}-Z_0}{Z_{in}-Z_0}$$
+$$\Gamma=\frac{Z_{in}-Z_0}{Z_{in}+Z_0}$$
 $$S_{11}=20\log_{10}(\Gamma)\quad [\si{\deci\bel}]$$
+\subsubsection{Transmission}
+$$\abs{\Gamma}^2+\abs{T}^2=1$$
 \subsection{Rayonnement}
 On utilise la formule de Friis
 $$P_r=P_tG_rG_t\left(\frac{\lambda}{4\pi R}\right)^2$$
@@ -31,8 +40,15 @@ $$\boxed{P_{\si{\deci\bel m}}=10\log_{10}\left(P_{\si{\milli\watt}}\right)}$$
 
 $$r_1=\sqrt{0.38\frac{D^3}{\lambda}}$$
 $$r_2=\frac{2D^2}{\lambda}$$
+Avec $D$ la plus grand dimension de l'élément rayonnant (d'un bord à l'autre dans le cas d'une dipôle)
+\subsection{Directivité}
+$$D=\frac{4\pi}{\theta_{1r}\theta_{2r}}$$
+Avec $\theta_i$ les angles d'ouverture à moitié de puissance respectement de 2 plans perpendiculaires.
+\paragraph{Isotrope} : boule
+\paragraph{Hémisphérique} : demi boule
 
 \subsection{Paramètres antennes}
+Valeurs importantes en gras.
 \begin{enumerate}
 \item Physique
 	\begin{itemize}
@@ -44,13 +60,14 @@ $$r_2=\frac{2D^2}{\lambda}$$
 	\begin{itemize}
 	\item $S_{11}$ en fct de f
 	\item $S_{11}$ à $f_{res}$
-	\item Bande passante à $-10[dB]$
+	\item \textbf{Fréquence de résonance}
+	\item \textbf{Bande passante à $-10[dB]$}
 	\end{itemize}
 \item Rayonnement
 	\begin{itemize}
-	\item gain 
-	\item efficacité
-	\item directivité
+	\item \textbf{gain}
+	\item \textbf{efficacité}
+	\item \textbf{directivité}
 	\item diag de rayonnement
 	\item angle d'ouverture à $-3[dB]$
 	\end{itemize}
